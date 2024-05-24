@@ -6,3 +6,4 @@ root: intro
 chapters: 
   - file: chapters/randomness
   - file: chapters/algorithms
+  - file: chapters/lcg
