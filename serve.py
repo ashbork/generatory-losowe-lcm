@@ -2,10 +2,13 @@ from livereload import Server, shell
 
 server = Server()
 
+BUILD_COMMAND = "jupyter-book build ."
+OUTPUT_PATH = "_build/html"
+CHAPTERS_PATH = "chapters/"
 
-filetypes = ["*.bib", "*.yml", "*.ipynb"]
+WATCHED_PATHS = ["*.bib", "*.yml", "*.ipynb", "*.md", f"{CHAPTERS_PATH}/*"]
 
-for filetype in filetypes:
-    server.watch(filetype, shell("jupyter-book build ."))
+for filetype in WATCHED_PATHS:
+    server.watch(filetype, shell(BUILD_COMMAND))
 
-server.serve(root="_build/html")
+server.serve(root=OUTPUT_PATH)
