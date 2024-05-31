@@ -5,7 +5,8 @@ title: Liniowy generator kongruencyjny
 author: Ashley Tarczyński-Borkowicz
 copyright: "2024"
 logo: logo.png
-
+only_build_toc_files: true
+navigation_with_keys: false
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
