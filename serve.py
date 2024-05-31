@@ -11,4 +11,7 @@ WATCHED_PATHS = ["*.bib", "*.yml", "*.ipynb", "*.md", f"{CHAPTERS_PATH}/*"]
 for filetype in WATCHED_PATHS:
     server.watch(filetype, shell(BUILD_COMMAND))
 
+print("Running initial build...")
+shell(BUILD_COMMAND)()
+
 server.serve(root=OUTPUT_PATH)
