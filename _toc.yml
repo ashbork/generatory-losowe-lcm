@@ -7,4 +7,5 @@ chapters:
   - file: chapters/randomness
   - file: chapters/algorithms
   - file: chapters/lcg
+  - file: chapters/conclusion
   - file: bibliography
